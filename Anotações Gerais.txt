@@ -1,0 +1,59 @@
+Declaração de variáveis 
+	No JavaScript, a escolha do tipo de declaração de variável depende de vários fatores, como escopo, elevação (hoisting), e se a variável será reatribuída. Vou explicar os três principais tipos de declarações: var, let e const.
+
+	var:
+		Escopo: Tem escopo de função, o que significa que é limitada ao contexto da função em que foi declarada. Se declarada fora de uma função, tem escopo global.
+		Elevação (Hoisting): As declarações são movidas para o topo do seu escopo antes da execução do código.
+		Reatribuição: Pode ser reatribuída e redeclarada no mesmo escopo.
+		Uso: Use var em situações onde você precisa de uma variável com escopo de função ou global, e está trabalhando em código que precisa ser compatível com versões mais antigas do JavaScript (antes do ES6).
+
+	let:
+	Escopo: Tem escopo de bloco, o que significa que só é acessível dentro do bloco ({ ... }) em que foi declarada.
+	Elevação (Hoisting): Embora tecnicamente seja elevada, não é inicializada e resultará em um erro se tentar acessá-la antes de sua declaração.
+	Reatribuição: Pode ser reatribuída, mas não redeclarada no mesmo escopo.
+	Uso: Use let quando precisar de uma variável que só existe dentro de um determinado bloco (como em loops ou blocos condicionais) e quando essa variável precisar ser reatribuída.
+	
+	const:
+		Escopo: Assim como let, tem escopo de bloco.
+		Elevação (Hoisting): Igual ao let, é elevada, mas não inicializada.
+		Reatribuição: Não pode ser reatribuída ou redeclarada.
+		Uso: Use const para declarar constantes ou quando souber que o valor da variável não precisará ser alterado. Isso ajuda a prevenir reatribuições acidentais e torna o código mais legível e fácil de entender.
+
+	Em resumo:
+		Use var para compatibilidade com código mais antigo ou quando precisar de escopo de função/global e reatribuições.
+		Use let para variáveis que podem mudar e estão limitadas a um escopo de bloco.
+		Use const para valores que não mudarão e que também estão limitados a um escopo de bloco.
+		A tendência moderna no JavaScript é usar let e const para uma melhor gestão do escopo e evitar problemas comuns causados pelo escopo global e elevação de var.
+
+Operadores condicionais
+	No JavaScript, os operadores condicionais são usados para realizar operações com base em diferentes condições. Eles são fundamentais para o controle de fluxo em scripts. Aqui estão os principais operadores condicionais:
+
+	Operador de Igualdade (==): Verifica se os valores de dois operandos são iguais, após a conversão de tipos. Por exemplo, 5 == '5' é verdadeiro.
+
+	Operador de Igualdade Estrita (===): Semelhante ao operador de igualdade, mas também verifica o tipo dos operandos. Por exemplo, 5 === '5' é falso, pois um é número e o outro é string.
+
+	Operador de Desigualdade (!=): Verifica se dois operandos não são iguais, após a conversão de tipos. Por exemplo, 5 != '8' é verdadeiro.
+
+	Operador de Desigualdade Estrita (!==): Verifica se dois operandos não são iguais, ou se são de tipos diferentes. Por exemplo, 5 !== '5' é verdadeiro.
+
+	Operador Maior Que (>): Verifica se o valor do operando à esquerda é maior que o valor do operando à direita. Por exemplo, 10 > 5 é verdadeiro.
+
+	Operador Menor Que (<): Verifica se o valor do operando à esquerda é menor que o valor do operando à direita. Por exemplo, 5 < 10 é verdadeiro.
+
+	Operador Maior ou Igual a (>=): Verifica se o valor do operando à esquerda é maior ou igual ao valor do operando à direita. Por exemplo, 10 >= 10 é verdadeiro.
+
+	Operador Menor ou Igual a (<=): Verifica se o valor do operando à esquerda é menor ou igual ao valor do operando à direita. Por exemplo, 5 <= 10 é verdadeiro.
+
+	Operador Ternário (? :): É o único operador JavaScript que usa três operandos. O operador pode ter um de dois valores com base em uma condição. A sintaxe é condição ? valorSeVerdadeiro : valorSeFalso. Por exemplo, idade >= 18 ? 'adulto' : 'menor'.
+
+	Operador Lógico "E" (&&):
+	Uso: Retorna true se ambos os operandos são verdadeiros. Se um dos operandos for falso, ele retorna false.
+	Exemplo: a && b retorna true se tanto a quanto b forem verdadeiros.
+	
+	Operador Lógico "OU" (||):
+	Uso: Retorna true se pelo menos um dos operandos for verdadeiro. Se ambos forem falsos, retorna false.
+	Exemplo: a || b retorna true se a ou b (ou ambos) forem verdadeiros.
+
+	Esses operadores são amplamente usados em estruturas de controle de fluxo como if, else, while, e for, permitindo que você execute diferentes trechos de código com base em diferentes condições.
+	
+	
